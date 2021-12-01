@@ -1,0 +1,14 @@
+f = open("adatok","r")
+
+li = []
+for i in f:
+    li.append(int(i))
+
+mo = 0
+for i in range(len(li)-3):
+    a = li[i] + li[i+1] + li[i+2]
+    b = li[i+1] + li[i+2] + li[i+3]
+    if b > a:
+        mo += 1
+
+print(mo)
